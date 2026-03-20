@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Nguyen Duc Thang - UX/UI Designer Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Google Fonts: Inter and Poppins for a modern look -->
+  <link href="IMG_20260103_120033.jpg" rel="stylesheet" />
+  <link href="portfoil.css">
+  <style data-purpose="custom-config">
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0c29;
+      /* Dark midnight background */
+      background: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f0c29);
+      color: #ffffff;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+  <style data-purpose="layout-styles">
+    /* Custom styling for the top rounded header badge */
+    .about-me-badge {
+      background: linear-gradient(90deg, #a78bfa 0%, #7c3aed 100%);
+      border-radius: 0 50px 50px 0;
+      width: fit-content;
+      padding: 0.75rem 3rem 0.75rem 1.5rem;
+      box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+    }
+
+    /* Profile Image Container with unique curve */
+    .profile-image-container {
+      border-radius: 40% 40% 50% 50%;
+      overflow: hidden;
+      border: 2px solid rgba(157, 139, 250, 0.3);
+      background: #87ceeb;
+      /* Light blue placeholder background */
+    }
+
+    /* Main Skills Card with large rounded corner */
+    .skills-card {
+      background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+      border-top-right-radius: 8rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Grid Divider Style */
+    .section-divider {
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Floating Abstract Lines Animation (Simulated) */
+    .bg-abstract-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  </style>
+  <style data-purpose="skill-icons">
+    /* Software Icon Styling */
+    .tech-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.25rem;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .tech-icon:hover {
+      transform: scale(1.15) translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Specific Icon Colors */
+    .bg-figma {
+      background-color: #1E1E1E;
+      color: #F24E1E;
+    }
+
+    .bg-premiere {
+      background-color: #00005B;
+      color: #EA77FF;
+    }
+
+    .bg-aftereffects {
+      background-color: #00005B;
+      color: #D191FF;
+    }
+
+    .bg-illustrator {
+      background-color: #330000;
+      color: #FF9A00;
+    }
+
+    .bg-indesign {
+      background-color: #49021F;
+      color: #FF3366;
+    }
+
+    .bg-photoshop {
+      background-color: #001E36;
+      color: #31A8FF;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-4 md:p-8">
+  <!-- BEGIN: Main Portfolio Container -->
+  <main
+    class="relative max-w-4xl w-full bg-[#111827]/80 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-white/5"
+    data-purpose="portfolio-wrapper">
+    <!-- Abstract Background SVG elements -->
+    <div class="bg-abstract-lines">
+      <svg height="100%" viewbox="0 0 1000 1000" width="100%" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 100 Q 400 250 100 800" fill="transparent" stroke="#7c3aed" stroke-width="1"></path>
+        <path d="M900 100 Q 600 400 900 900" fill="transparent" stroke="#7c3aed" stroke-width="1"></path>
+      </svg>
+    </div>
+    <!-- BEGIN: Top Section (About & Intro) -->
+    <section class="p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+      <!-- Left Column: Intro -->
+      <div class="md:col-span-7 space-y-8">
+        <div class="about-me-badge">
+          <h1 class="text-3xl font-extrabold tracking-tight"> Portfolio </h1>
+        </div>
+        <style>
+          .bio-p {
+            filter: blur(2.5px);
+            opacity: 0.5;
+            transition: all 0.4s ease;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            border-left: 2px solid transparent;
+            cursor: default;
+          }
+
+          .bio-p:hover {
+            filter: blur(0);
+            opacity: 1;
+            background: rgba(124, 58, 237, 0.1);
+            border-left: 2px solid #a78bfa;
+            transform: translateX(4px);
+          }
+
+          .bio-p:hover .hl {
+            color: #a78bfa;
+          }
+        </style>
+        <div class="space-y-2 text-gray-300 max-w-md">
+          <p class="text-sm font-semibold" style="filter:none;opacity:1;">👋 Hello everyone!</p>
+
+          <p class="bio-p text-sm leading-relaxed">
+            My name is <span class="hl text-white font-semibold transition duration-300">Subhajit Gope</span>
+            and I am currently pursuing <span class="hl text-white font-semibold transition duration-300">B.Tech
+              CSE</span>.
+            I'm looking forward to engaging with the course material and collaborating with all of you this semester.
+          </p>
+
+          <p class="bio-p text-sm leading-relaxed">
+            Outside of academics, I'm particularly interested in playing
+            <span class="hl font-medium transition duration-300">eSports</span> 🎮
+            and researching new technology to upgrade myself. In my free time, I love reading
+            <span class="hl font-medium transition duration-300">story books</span> 📚,
+            playing <span class="hl font-medium transition duration-300">video games</span> 🎯,
+            <span class="hl font-medium transition duration-300">video editing</span> 🎬
+            and <span class="hl font-medium transition duration-300">photography</span> 📸.
+          </p>
+
+          <p class="bio-p text-sm leading-relaxed">
+            Looking forward to connecting and creating something great together! 🚀
+          </p>
+        </div>
+        <!-- BEGIN: Contact Section -->
+        <div class="pt-4" data-purpose="contact-info">
+          <h2 class="text-xl font-bold mb-4">Contact</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-[11px] font-medium text-gray-300">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+                  </path>
+                </svg>
+              </span>
+              <a href="mailto:subhajitgope814@gmail.com"
+                class="hover:text-white hover:underline transition-colors">subhajitgope814@gmail.com</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z">
+                  </path>
+                </svg>
+              </span>
+              <a href="tel:+918974405816" style="transition: all 0.3s ease; display: inline-block;"
+                onmouseover="this.style.color='#a78bfa';this.style.transform='scale(1.1)';this.style.textShadow='0 0 8px rgba(167,139,250,0.5)';this.style.textDecoration='underline'"
+                onmouseout="this.style.color='';this.style.transform='scale(1)';this.style.textShadow='none';this.style.textDecoration='none'">+91
+                8974405816</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
+                <svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24">
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z">
+                  </path>
+                </svg>
+              </span>
+              <a href="https://www.linkedin.com/in/subhajit-gope" target="_blank"
+                class="hover:text-white hover:underline transition-colors">linkedin.com/in/subhajit-gope</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+
+              <!-- Instagram Logo -->
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                style="width: 24px; height: 24px; border-radius: 6px;" />
+
+              <!-- Label -->
+              <span style="
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: rgba(214, 26, 26, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: bold;
+        color: rgb(234, 10, 10);">
+
+              </span>
+
+              <!-- Link -->
+              <a href="https://www.instagram.com/subh_ajit15" target="_blank"
+                style="color: #ccc; text-decoration: none; transition: 0.3s;">
+                instagram.com/subh_ajit15
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <!-- END: Contact Section -->
+      </div>
+      <!-- Right Column: Profile Image -->
+      <div class="md:col-span-5 flex justify-center">
+        <div class="relative group">
+          <!-- Abstract Circle behind photo -->
+          <div
+            class="absolute -inset-4 border border-purple-500/20 rounded-full scale-110 transition-all duration-500 group-hover:border-purple-500/60 group-hover:scale-125">
+          </div>
+          <style>
+            .profile-hover {
+              transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            .profile-hover:hover {
+              transform: scale(1.05) rotate(2deg);
+              box-shadow: 0 20px 60px rgba(124, 58, 237, 0.4), 0 0 30px rgba(167, 139, 250, 0.2);
+            }
+
+            .profile-hover:hover img {
+              filter: brightness(1.1) contrast(1.05);
+            }
+          </style>
+          <div class="profile-image-container w-64 h-80 shadow-2xl cursor-pointer overflow-hidden group">
+
+            <img src="IMG_20260103_120033.jpg" alt="Subhajit Gope Profile" class="w-full h-full object-cover transition-all duration-500 
+           group-hover:grayscale group-hover:contrast-150 group-hover:brightness-110 
+           group-hover:scale-105 sketch-effect" />
+
+          </div>
+        </div>
+      </div>
+    </section <!-- END: Top Section -->
+    <!-- BEGIN: Bottom Section (Skills & Education) -->
+    <section class="skills-card mt-8 p-10 md:p-14" data-purpose="skills-and-education">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Left Side: Education & Tech Skills -->
+        <div class="space-y-12">
+          <!-- Education Sub-section -->
+          <div data-purpose="education"
+            class="group transition-all duration-300 p-4 rounded-xl hover:bg-white/10 hover:scale-[1.02] cursor-pointer">
+
+            <div class="flex items-center gap-4 mb-4">
+              <h3 class="text-2xl font-bold transition-colors duration-300 group-hover:text-blue-300">
+                Education
+              </h3>
+              <span class="text-[10px] border border-white/40 px-3 py-1 rounded-full text-white/80 
+                 transition-all duration-300 group-hover:border-blue-300 group-hover:text-blue-300">
+                2024 - Now
+              </span>
+            </div>
+
+            <p class="text-sm font-light text-white/90 transition-colors duration-300 group-hover:text-white">
+              THE ICFAI University - B.TECH (COMPUTER SCIENCE AND ENGINEERING)
+            </p>
+
+          </div>
+          <!-- Technical Skills Sub-section -->
+          <div data-purpose="technical-skills">
+            <h3 class="text-2xl font-bold mb-6">Technical Skills</h3>
+
+            <div class="grid grid-cols-3 gap-4 max-w-[250px]">
+
+              <div class="tech-icon python" title="Python">Py</div>
+              <div class="tech-icon cpp" title="C++">C++</div>
+              <div class="tech-icon c" title="C">C</div>
+              <div class="tech-icon html" title="HTML">Ht</div>
+              <div class="tech-icon java" title="Java">Jv</div>
+
+            </div>
+          </div>
+
+          <style>
+            .tech-icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 60px;
+              width: 60px;
+              border-radius: 12px;
+              font-weight: bold;
+              color: white;
+              cursor: pointer;
+              transition: all 0.3s ease;
+            }
+
+            /* Hover Effect */
+            .tech-icon:hover {
+              transform: scale(1.15);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            /* Individual Colors */
+            .python {
+              background: #3776AB;
+            }
+
+            .cpp {
+              background: #00599C;
+            }
+
+            .c {
+              background: #555555;
+            }
+
+            .html {
+              background: #E34F26;
+            }
+
+            .java {
+              background: #007396;
+            }
+
+            /* Optional Glow Effect on Hover */
+            .python:hover {
+              background: #4ea1d3;
+            }
+
+            .cpp:hover {
+              background: #1f7acc;
+            }
+
+            .c:hover {
+              background: #777777;
+            }
+
+            .html:hover {
+              background: #ff6a3d;
+            }
+
+            .java:hover {
+              background: #0099cc;
+            }
+          </style>
+        </div>
+        <!-- Interest Sub-section -->
+        <div data-purpose="interest">
+          <h3 class="text-2xl font-bold mb-4">Interest</h3>
+
+          <div class="flex items-center gap-6 text-sm text-white/90">
+
+            <span class="cursor-pointer transition-all duration-300 
+                 hover:text-blue-400 hover:scale-110 hover:underline">
+              Web Developer
+            </span>
+
+            <span class="text-white/30">|</span>
+
+            <span class="cursor-pointer transition-all duration-300 
+                 hover:text-blue-400 hover:scale-110 hover:underline">
+              Coder
+            </span>
+
+          </div>
+        </div>
+        <!-- Right Side: Soft Skills, Skill Set, Language -->
+        <div class="space-y-12">
+          <!-- Soft Skills Sub-section -->
+          <div data-purpose="skills">
+            <h3 class="text-2xl font-bold mb-6">Skills</h3>
+
+            <div class="grid grid-cols-2 text-sm text-white/90 gap-y-3">
+
+              <div
+                class="flex items-center justify-between pr-4 section-divider hover:text-blue-400 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                <span>Programming</span>
+              </div>
+
+              <div class="pl-4 hover:text-blue-400 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                Systems & Architecture
+              </div>
+
+              <div
+                class="flex items-center justify-between pr-4 section-divider hover:text-blue-400 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                <span>Data Science</span>
+              </div>
+
+              <div class="pl-4 hover:text-blue-400 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                Bug Finding
+              </div>
+
+              <div
+                class="flex items-center justify-between pr-4 section-divider hover:text-blue-400 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                <span>Web Development</span>
+              </div>
+
+              <div class="pl-4 hover:text-blue-400 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                Photography
+              </div>
+
+              <div
+                class="flex items-center justify-between pr-4 section-divider hover:text-blue-400 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                <span>eSports & Gaming</span>
+              </div>
+
+            </div>
+          </div>
+          <!-- Skill Set Sub-section -->
+          <div data-purpose="skill-set">
+            <h3 class="text-2xl font-bold mb-6">Skill Set</h3>
+
+            <div class="grid grid-cols-2 text-sm text-white/90 gap-4">
+
+              <!-- Core Programming -->
+              <div class="cursor-pointer transition-all duration-300 
+                hover:text-blue-400 hover:translate-x-2 
+                flex items-center justify-between pr-4 section-divider">
+                <span>Core Programming</span>
+              </div>
+
+              <!-- Development -->
+              <div class="cursor-pointer transition-all duration-300 
+                hover:text-blue-400 hover:translate-x-2 pl-4">
+                Development
+              </div>
+
+              <!-- Creative Tech -->
+              <div class="cursor-pointer transition-all duration-300 
+                hover:text-blue-400 hover:translate-x-2 
+                flex items-center justify-between pr-4 section-divider">
+                <span>Creative Tech</span>
+              </div>
+
+              <!-- Game Development -->
+              <div class="cursor-pointer transition-all duration-300 
+                hover:text-blue-400 hover:translate-x-2 pl-4">
+                Game Development
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Language Sub-section -->
+          <div data-purpose="languages">
+            <h3 class="text-2xl font-bold mb-4">Languages</h3>
+
+            <div class="flex items-center gap-6 text-sm text-white/90">
+
+              <span class="lang-item">Hindi</span>
+              <span class="divider">|</span>
+              <span class="lang-item">Bengali</span>
+              <span class="divider">|</span>
+              <span class="lang-item">English</span>
+
+            </div>
+          </div>
+
+          <style>
+            .lang-item {
+              cursor: pointer;
+              transition: all 0.3s ease;
+              position: relative;
+            }
+
+            /* Hover Effect */
+            .lang-item:hover {
+              color: #ffffff;
+              transform: scale(1.1);
+            }
+
+            /* Underline animation */
+            .lang-item::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -3px;
+              width: 0%;
+              height: 2px;
+              background: #00ffff;
+              transition: width 0.3s ease;
+            }
+
+            .lang-item:hover::after {
+              width: 100%;
+            }
+
+            /* Divider styling */
+            .divider {
+              color: rgba(255, 255, 255, 0.3);
+            }
+          </style>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- END: Bottom Section -->
+  </main>
+  <!-- END: Main Portfolio Container -->
+</body>
+
+</html>
