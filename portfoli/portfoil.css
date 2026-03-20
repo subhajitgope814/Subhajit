@@ -1,0 +1,8 @@
+.sketch-effect {
+    filter: contrast(100%) brightness(100%);
+}
+
+.group:hover .sketch-effect {
+    filter: grayscale(100%) contrast(200%) brightness(120%);
+    mix-blend-mode: multiply;
+}
